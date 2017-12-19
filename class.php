@@ -1,19 +1,21 @@
 <?php
 
-class CProminadoComponent extends CBitrixComponent
+namespace Prominado\Components;
+
+class ComponentName extends CBitrixComponent
 {
-    function getResult()
+    private function getResult()
     {
-        return Array(
-            "ID" => 1,
-            "PARAM" => $this->arParams["PARAM_2"]
-        );
+        return [
+            'ID'    => 1,
+            'PARAM' => $this->arParams['PARAM_2']
+        ];
     }
-    
-    function executeComponent()
+
+    public function executeComponent()
     {
         $this->arResult = $this->getResult();
-        
+
         $this->includeComponentTemplate();
     }
 }
